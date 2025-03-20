@@ -93,6 +93,29 @@ To use all the supported models, you'll need to obtain API keys from the followi
 
 Add these keys to your `.env.local` file or Vercel environment variables.
 
+## Supabase Integration
+
+The application now includes Supabase integration for chat history management:
+
+- **Chat History Persistence**: Store and retrieve chat sessions and messages
+- **User-specific Data**: Row Level Security (RLS) ensures users can only access their own data
+- **Time-based Filtering**: Filter chat history by time periods (7, 14, 30 days, or all)
+- **Session Management**: Copy, delete, and restore chat sessions
+
+### Supabase Setup
+
+To use the Supabase integration, add the following environment variables to your `.env.local` file:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
+```
+
+The database schema can be found in `supabase/schema.sql`. Run these SQL statements in the Supabase SQL editor to set up the necessary tables and Row Level Security policies.
+
+For detailed setup instructions, see the [Supabase Integration Documentation](supabase/README.md).
+
 ## Testing
 
 The application includes comprehensive tests to ensure all features work correctly:

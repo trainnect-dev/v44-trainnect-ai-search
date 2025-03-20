@@ -11,6 +11,7 @@ import {
   Menu,
   X
 } from "lucide-react";
+import { ChatHistoryDropdown } from "./chat-history/chat-history-dropdown";
 
 interface SidebarLinkProps {
   label: string;
@@ -167,3 +168,6 @@ export const Logo = () => {
     </Link>
   );
 };
+
+// Export ChatHistoryDropdown for use in other components
+export { ChatHistoryDropdown };

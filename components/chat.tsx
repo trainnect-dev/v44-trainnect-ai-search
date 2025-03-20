@@ -19,6 +19,9 @@ export function Chat() {
   const [files, setFiles] = useState<FileList | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Generate a unique chat ID for each page load to ensure proper reset
+  const chatId = useRef<string>(`chat-${Date.now()}`).current;
+
   // Default values for the following features 
   const reasoningModeEnabled = true;
   const multimodalEnabled = true;
@@ -26,7 +29,7 @@ export function Chat() {
   const selectedModel = models.find((model) => model.id === selectedModelId);
 
   const { messages, append, status, stop } = useChat({
-    id: "primary",
+    id: chatId,
     body: {
       selectedModelId,
       isReasoningEnabled: reasoningModeEnabled ? isReasoningEnabled : false,
