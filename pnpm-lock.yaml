@@ -13,7 +13,7 @@ importers:
         version: 1.1.18(zod@3.24.2)
       '@ai-sdk/google':
         specifier: ^1.1.26
-        version: 1.1.26(zod@3.24.2)
+        version: 1.1.27(zod@3.24.2)
       '@ai-sdk/groq':
         specifier: 1.1.15
         version: 1.1.15(zod@3.24.2)
@@ -36,7 +36,7 @@ importers:
         specifier: ^0.6.1
         version: 0.6.1(@supabase/supabase-js@2.49.1(bufferutil@4.0.9))
       '@supabase/supabase-js':
-        specifier: ^2.40.1
+        specifier: ^2.49.1
         version: 2.49.1(bufferutil@4.0.9)
       '@tavily/core':
         specifier: ^0.3.2
@@ -165,8 +165,8 @@ packages:
     peerDependencies:
       zod: ^3.0.0
 
-  '@ai-sdk/google@1.1.26':
-    resolution: {integrity: sha512-VHhwQQZZ2BPWgsw0CKQDyA7ZddDfNKXQ/lcTSRJD16nD86LaSZkDzx3Wx7Ln1lXmokzPEv/tuFrCs5ntqB2jrA==}
+  '@ai-sdk/google@1.1.27':
+    resolution: {integrity: sha512-fI0lg7jfqd4Cbtyo932bj1x11Jdhs9s2kNNjOIL1XXxj4EygKepYpHmy0tnKz9gPm6lUShrgnvdKTk5K8GTcRw==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.0.0
@@ -206,6 +206,15 @@ packages:
 
   '@ai-sdk/provider-utils@2.1.14':
     resolution: {integrity: sha512-0fNQwstwqHP+cE9bP9nQXeEhY/qJRGW5Y+AQrvwzd0EI2+gH1GmwI1IC/gIOksmz/gRy4G+kXXD+Fbq4T/jCbA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.0.0
+    peerDependenciesMeta:
+      zod:
+        optional: true
+
+  '@ai-sdk/provider-utils@2.1.15':
+    resolution: {integrity: sha512-ndMVtDm2xS86t45CJZSfyl7UblZFewRB8gZkXQHeNi7BhjCYkhE+XQMwfDl6UOAO7kaV60IC1R4JLDWxWiiHug==}
     engines: {node: '>=18'}
     peerDependencies:
       zod: ^3.0.0
@@ -2071,8 +2080,8 @@ packages:
     engines: {node: '>=0.10.0'}
     hasBin: true
 
-  electron-to-chromium@1.5.121:
-    resolution: {integrity: sha512-gpIEzIb3uvm6V8IK452TvzOvZ3EAF8D5i11SMUG7BjpF2aalh5KyKX5dO+GDW5m9Qdia1ejLm6WM5NOIOd7sbQ==}
+  electron-to-chromium@1.5.122:
+    resolution: {integrity: sha512-EML1wnwkY5MFh/xUnCvY8FrhUuKzdYhowuZExZOfwJo+Zu9OsNCI23Cgl5y7awy7HrUHSwB1Z8pZX5TI34lsUg==}
 
   emittery@0.13.1:
     resolution: {integrity: sha512-DeWwawk6r5yR9jFgnDKYt4sLS0LmHJJi3ZOnb5/JdbYwj3nW+FxQnHIjhBKz8YLC7oRNPVM9NQ47I3CVx34eqQ==}
@@ -3909,8 +3918,8 @@ packages:
   trough@2.2.0:
     resolution: {integrity: sha512-tmMpK00BjZiUyVyvrBK7knerNgmgvcV/KLVyuma/SC+TQN167GrMRciANTz09+k3zW8L8t60jWO1GpfkZdjTaw==}
 
-  ts-api-utils@2.0.1:
-    resolution: {integrity: sha512-dnlgjFSVetynI8nzgJ+qF62efpglpWRk8isUEWZGWlJYySCTD6aKvbUDu+zbPeDakk3bg5H4XpitHukgfL1m9w==}
+  ts-api-utils@2.1.0:
+    resolution: {integrity: sha512-CUgTZL1irw8u29bzrOD/nH85jqyc74D6SshFgujOIA7osm2Rz7dYH77agkx7H4FBNxDq7Cjf+IjaX/8zwFW+ZQ==}
     engines: {node: '>=18.12'}
     peerDependencies:
       typescript: '>=4.8.4'
@@ -4193,10 +4202,10 @@ snapshots:
       '@ai-sdk/provider-utils': 2.1.14(zod@3.24.2)
       zod: 3.24.2
 
-  '@ai-sdk/google@1.1.26(zod@3.24.2)':
+  '@ai-sdk/google@1.1.27(zod@3.24.2)':
     dependencies:
       '@ai-sdk/provider': 1.0.12
-      '@ai-sdk/provider-utils': 2.1.14(zod@3.24.2)
+      '@ai-sdk/provider-utils': 2.1.15(zod@3.24.2)
       zod: 3.24.2
 
   '@ai-sdk/groq@1.1.15(zod@3.24.2)':
@@ -4233,6 +4242,15 @@ snapshots:
       zod: 3.24.2
 
   '@ai-sdk/provider-utils@2.1.14(zod@3.24.2)':
+    dependencies:
+      '@ai-sdk/provider': 1.0.12
+      eventsource-parser: 3.0.0
+      nanoid: 3.3.11
+      secure-json-parse: 2.7.0
+    optionalDependencies:
+      zod: 3.24.2
+
+  '@ai-sdk/provider-utils@2.1.15(zod@3.24.2)':
     dependencies:
       '@ai-sdk/provider': 1.0.12
       eventsource-parser: 3.0.0
@@ -5708,7 +5726,7 @@ snapshots:
       graphemer: 1.4.0
       ignore: 5.3.2
       natural-compare: 1.4.0
-      ts-api-utils: 2.0.1(typescript@5.8.2)
+      ts-api-utils: 2.1.0(typescript@5.8.2)
       typescript: 5.8.2
     transitivePeerDependencies:
       - supports-color
@@ -5736,7 +5754,7 @@ snapshots:
       '@typescript-eslint/utils': 8.27.0(eslint@9.22.0(jiti@1.21.7))(typescript@5.8.2)
       debug: 4.4.0
       eslint: 9.22.0(jiti@1.21.7)
-      ts-api-utils: 2.0.1(typescript@5.8.2)
+      ts-api-utils: 2.1.0(typescript@5.8.2)
       typescript: 5.8.2
     transitivePeerDependencies:
       - supports-color
@@ -5752,7 +5770,7 @@ snapshots:
       is-glob: 4.0.3
       minimatch: 9.0.5
       semver: 7.7.1
-      ts-api-utils: 2.0.1(typescript@5.8.2)
+      ts-api-utils: 2.1.0(typescript@5.8.2)
       typescript: 5.8.2
     transitivePeerDependencies:
       - supports-color
@@ -6107,7 +6125,7 @@ snapshots:
   browserslist@4.24.4:
     dependencies:
       caniuse-lite: 1.0.30001706
-      electron-to-chromium: 1.5.121
+      electron-to-chromium: 1.5.122
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.24.4)
 
@@ -6388,7 +6406,7 @@ snapshots:
     dependencies:
       jake: 10.9.2
 
-  electron-to-chromium@1.5.121: {}
+  electron-to-chromium@1.5.122: {}
 
   emittery@0.13.1: {}
 
@@ -8818,7 +8836,7 @@ snapshots:
 
   trough@2.2.0: {}
 
-  ts-api-utils@2.0.1(typescript@5.8.2):
+  ts-api-utils@2.1.0(typescript@5.8.2):
     dependencies:
       typescript: 5.8.2
 
