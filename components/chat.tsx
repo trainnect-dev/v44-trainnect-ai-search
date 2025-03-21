@@ -91,10 +91,10 @@ export function Chat() {
       ) : (
         <div className="flex flex-col gap-0.5 sm:text-2xl text-xl md:w-1/2 w-full">
           <div className="flex flex-row gap-2 items-center">
-            <div>Trainnect AI.</div>
+            <div>GK-AI.</div>
           </div>
           <div className="dark:text-zinc-500 text-zinc-400">
-            Search Less, Learn More
+            A Powerful Multi-LLM-AI, Built by Gregory Kennedy
           </div>
         </div>
       )}

@@ -1,0 +1,47 @@
+{
+  "timestamp": "2025-03-18T05:56:53.213Z",
+  "query": "What LLM powers this AI's responses?",
+  "results": {
+    "query": "What LLM powers this AI's responses?",
+    "responseTime": 3.88,
+    "images": [],
+    "results": [
+      {
+        "title": "What are LLMs, and how are they used in generative AI?",
+        "url": "https://www.computerworld.com/article/1627101/what-are-large-language-models-and-how-are-they-used-in-generative-ai.html",
+        "content": "ChatGPT stands for chatbot generative pre-trained transformer. The chatbot’s foundation is the GPT large language model (LLM), a computer algorithm that processes natural language inputs and predicts the next word based on what it’s already seen. Then it predicts the next word, and the next word, and so on until its answer is complete.\nIn the simplest of terms, LLMs are next-word prediction engines. [...] Because some LLMs also train themselves on internet-based data, they can move well beyond what their initial developers created them to do. For example, Microsoft’s Bing uses GPT-3 as its basis, but it’s also querying a search engine and analyzing the first 20 results or so. It uses both an LLM and the internet to offer responses. [...] LLMs are a type of AI that are currently trained on a massive trove of articles, Wikipedia entries, books, internet-based resources and other input to produce human-like responses to natural language queries. That’s an immense amount of data. But LLMs are poised to shrink, not grow, as vendors seek to customize them for specific uses that don’t need the massive data sets used by today’s most popular models.",
+        "rawContent": null,
+        "score": 0.5029633284318181
+      },
+      {
+        "title": "What is an LLM (large language model)? - Cloudflare",
+        "url": "https://www.cloudflare.com/learning/ai/what-is-large-language-model/",
+        "content": "A large language model (LLM) is a type of artificial intelligence (AI) program that can recognize and generate text, among other tasks. LLMs are trained on huge sets of data — hence the name \"large.\" LLMs are built on machine learning: specifically, a type of neural network called a transformer model. [...] LLMs can be trained to do a number of tasks. One of the most well-known uses is their application as generative AI: when given a prompt or asked a question, they can produce text in reply. The publicly available LLM ChatGPT, for instance, can generate essays, poems, and other textual forms in response to user inputs. [...] Fortunately, Cloudflare offers several services to allow developers to quickly start spinning up LLM applications, and other types of AI. Vectorize is a globally distributed vector database for querying data stored in no-egress-fee object storage (R2) or documents stored in Workers Key Value. Combined with the development platform Cloudflare Workers AI, developers can use Cloudflare to quickly start experimenting with their own LLMs.\nGetting Started",
+        "rawContent": null,
+        "score": 0.4898115221590909
+      },
+      {
+        "title": "What is a large language model (LLM)? - SAP",
+        "url": "https://www.sap.com/resources/what-is-large-language-model",
+        "content": "What is a large language model?\nA large language model (LLM) is a type of artificial intelligence (AI) that excels at processing, understanding, and generating human language. LLMs are useful for analyzing, summarizing, and creating content across many industries.\nLarge language model definition [...] LLMs can augment and amplify the power of generative AI to be even more predictive, adaptive, and intelligent. Some LLMs can collaborate with other AI models for more complex tasks, helping businesses streamline operations, improve decision-making, or create more interactive and personalized customer experiences.\nWith so many new applications being released at a rapid pace, there are many exciting possibilities for the future of AI and LLMs in business.\nMost common LLM capabilities in business [...] In the realm of artificial intelligence, LLMs are a specially designed subset of machine learning known as deep learning, which uses algorithms trained on large data sets to recognize complex patterns. LLMs learn by being trained on massive amounts of text. At the foundational level, they learn to respond to user requests with relevant, in-context content written in human language—the kind of words and syntax people use during ordinary conversation.\nHow are large language models and AI related?",
+        "rawContent": null,
+        "score": 0.48880144910606055
+      },
+      {
+        "title": "What Are Large Language Models (LLMs)? - IBM",
+        "url": "https://www.ibm.com/think/topics/large-language-models",
+        "content": "LLMs are redefining an increasing number of business processes and have proven their versatility across a myriad of use cases and tasks in various industries. They augment conversational AI in chatbots and virtual assistants (like IBM watsonx Assistant and Google’s BARD) to enhance the interactions that underpin excellence in customer care, providing context-aware responses that mimic interactions with human agents. [...] LLMs represent a significant breakthrough in NLP and artificial intelligence, and are easily accessible to the public through interfaces like Open AI’s Chat GPT-3 and GPT-4, which have garnered the support of Microsoft. Other examples include Meta’s Llama models and Google’s bidirectional encoder representations from transformers (BERT/RoBERTa) and PaLM models. IBM has also recently launched its Granite model series on watsonx.ai, which has become the generative AI backbone for other IBM",
+        "rawContent": null,
+        "score": 0.45596593534090907
+      },
+      {
+        "title": "What is LLM? - Large Language Models Explained - AWS",
+        "url": "https://aws.amazon.com/what-is/large-language-model/",
+        "content": "AWS offers several possibilities for large language model developers. Amazon Bedrock is the easiest way to build and scale generative AI applications with LLMs. Amazon Bedrock is a fully managed service that makes LLMs from Amazon and leading AI startups available through an API, so you can choose from various LLMs to find the model that's best suited for your use case. [...] LLMs will undoubtedly improve the performance of automated virtual assistants like Alexa, Google Assistant, and Siri. They will be better able to interpret user intent and respond to sophisticated commands.\nRead more about conversational AI\nHow can AWS help with LLMs? [...] Cohere’s Command model has similar capabilities and can work in more than 100 different languages.\nLightOn's Paradigm offers foundation models with claimed capabilities that exceed those of GPT-3. All these LLMs come with APIs that allow developers to create unique generative AI applications.",
+        "rawContent": null,
+        "score": 0.45074441812121213
+      }
+    ],
+    "answer": "I am an AI system built by a team of inventors at Amazon. My responses are generated using advanced AI technology. I do not disclose specific model names."
+  }
+}

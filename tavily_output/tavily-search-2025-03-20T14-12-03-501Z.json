@@ -1,0 +1,47 @@
+{
+  "timestamp": "2025-03-20T14:12:03.501Z",
+  "query": "latest research Nvidia Groq Google Gemini OpenAI Anthropic Meta Mistral Deepseek January 2025 to March 18 2025",
+  "results": {
+    "query": "latest research Nvidia Groq Google Gemini OpenAI Anthropic Meta Mistral Deepseek January 2025 to March 18 2025",
+    "responseTime": 2.4,
+    "images": [],
+    "results": [
+      {
+        "title": "The leading generative AI companies - IoT Analytics",
+        "url": "https://iot-analytics.com/leading-generative-ai-companies/",
+        "content": "The results? The teams found that the generative AI market is very dynamic and evolving rapidly, with new advancements constantly being announced. In the short time since IoT Analytics published its second generative AI report—the Generative AI Market Report 2025-2030—in late January 2025, more powerful foundation models have emerged, e.g., OpenAI’s o3-mini and DeepSeek’s R1. [...] DeepSeek disrupts AI market with efficient R1 model. New challengers are reshaping the market, with China-based AI company DeepSeek emerging as a notable disruptor. Its latest model, R1, has garnered global attention for its exceptional efficiency and significantly lower inference costs. This breakthrough has sparked concerns along the generative AI value chain, such as semiconductor giants like NVIDIA, leading to a decline in their stock prices as investors reassess the long-term demand for [...] Google earmarks billions of dollars for AI. On February 6, 2025, it announced a $75 billion AI investment in 2025 earmarked for capital expenditures, and in January 2025, it agreed to a $1 billion investment in generative AI startup Anthropic, building on its past investments of $2 billion in the startup.\n4. OpenAI",
+        "rawContent": null,
+        "score": 0.47264483261213713
+      },
+      {
+        "title": "Top 9 Large Language Models as of March 2025 | Shakudo",
+        "url": "https://www.shakudo.io/blog/top-9-large-language-models",
+        "content": "The DeepSeek-R1 is a 671B parameter Mixture-of-Experts (MoE) model with 37B activated parameters per token, trained through large-scale reinforcement learning with a strong focus on reasoning capabilities. The model excels at understanding and handling long-form content and demonstrates superior performance in complex tasks such as mathematics and code generation. The model is approximately 30 times more cost-efficient than OpenAI-o1 and 5 times faster, offering groundbreaking performance at a [...] The DeepSeek-R1 is a 671B parameter Mixture-of-Experts (MoE) model with 37B activated parameters per token, trained through large-scale reinforcement learning with a strong focus on reasoning capabilities. The model excels at understanding and handling long-form content and demonstrates superior performance in complex tasks such as mathematics and code generation. The model is approximately 30 times more cost-efficient than OpenAI-o1 and 5 times faster, offering groundbreaking performance at a [...] The DeepSeek-R1 is a 671B parameter Mixture-of-Experts (MoE) model with 37B activated parameters per token, trained through large-scale reinforcement learning with a strong focus on reasoning capabilities. The model excels at understanding and handling long-form content and demonstrates superior performance in complex tasks such as mathematics and code generation. The model is approximately 30 times more cost-efficient than OpenAI-o1 and 5 times faster, offering groundbreaking performance at a",
+        "rawContent": null,
+        "score": 0.4186095542480211
+      },
+      {
+        "title": "Best 39 Large Language Models (LLMs) in 2025 - Exploding Topics",
+        "url": "https://explodingtopics.com/blog/list-of-llms",
+        "content": "Developer: DeepSeek\nRelease date: January 2025\nNumber of Parameters: 671B total, 37B active\nWhat is it? DeepSeek R1 is a reasoning model that excels in math and coding. It beats or matches OpenAI o1 in several benchmarks, including MATH-500 and AIME 2024.\nOn its release, DeepSeek immediately hit headlines due to the low cost of training compared to most major LLMs.\nDeepSeek R1 is free to use and open-source. It's accessible via the API, the DeepSeek website, and mobile apps.\n2. GPT-4o [...] LLM NameDeveloperRelease DateAccessParametersDeepSeek R1DeepSeekJanuary 20, 2025Open-Source671 billionGPT-4oOpenAIMay 13, 2024APIUnknownClaude 3.5AnthropicJune 20, 2024APIUnknownGrok-1xAINovember 4, 2023Open-Source314 billionMistral 7BMistral AISeptember 27, 2023Open-Source7.3 billionPaLM 2GoogleMay 10, 2023Open-Source340 billionFalcon 180BTechnology Innovation InstituteSeptember 6, 2023Open-Source180 billionStable LM 2Stability AIJanuary 19, 2024Open-Source1.6 billion, 12 billionGemini [...] Because of the model’s size, Grok has a mixture-of-experts (MoE) architecture that only uses 25% of its weights for any given input token to maximize calculation efficiency.\nIn August 2024, both Grok-2 and Grok-2 mini were released to X users in beta. According to xAI's reports, Grok-2 outperforms GPT-4o in numerous categories, such as GPQA, MMLU-Pro, and DocVQA.\n5. Mistral 7B",
+        "rawContent": null,
+        "score": 0.4034092058751099
+      },
+      {
+        "title": "Artificial Analysis: AI Model & API Providers Analysis",
+        "url": "https://artificialanalysis.ai/",
+        "content": "|\n| Codestral-Mamba | Mistral | Open | 256k | \nModelAPI Providers\n|\n| Codestral (Jan '25) | Mistral | Proprietary | 256k | \nModelAPI Providers\n|\n| Mistral Small (Feb '24) | Mistral | Proprietary | 33k | \nModelAPI Providers\n|\n| Mistral Large (Feb '24) | Mistral | Proprietary | 33k | \nModelAPI Providers\n|\n| Mistral 7B Instruct | Mistral | Open | 8k | \nModelAPI Providers\n|\n| Mistral Medium | Mistral | Proprietary | 33k | \nModelAPI Providers\n|\n| Codestral (May '24) | Mistral | Open | 33k |",
+        "rawContent": null,
+        "score": 0.3914624113456464
+      },
+      {
+        "title": "Gemma 3: Google's new open model based on Gemini 2.0",
+        "url": "https://blog.google/technology/developers/gemma-3/",
+        "content": "Press corner\n\nRSS feed\n\nSubscribe\nBreadcrumb\n\n\nTechnology\nDevelopers\n\nIntroducing Gemma 3: The most capable model you can run on a single GPU or TPU\nMar 12, 2025\n·[[read-time]] min read\nShare\nTwitterFacebookLinkedInMail\nCopy link\nClement Farabet\nVP of Research, Google DeepMind\nTris Warkentin\nDirector, Google DeepMind\nRead AI-generated summary\nBullet points [...] AI #### The latest AI news we announced in February By Keyword Team Mar 03, 2025\n Developers #### Get coding help from Gemini Code Assist — now for free By Ryan J. Salva Feb 25, 2025\n Developers #### How Gemini added a new dimension to our I/O 2025 save the date puzzle By Ari Marini Feb 12, 2025\n Google DeepMind #### Gemini 2.0 is now available to everyone By Koray Kavukcuoglu Feb 05, 2025\n AI #### 60 of our biggest AI announcements in 2024 By Keyword Team Dec 23, 2024 [...] Published Time: 2025-03-12T07:30:00+00:00\nGemma 3: Google’s new open model based on Gemini 2.0",
+        "rawContent": null,
+        "score": 0.3106926332717678
+      }
+    ],
+    "answer": "DeepSeek R1 released in January 2025 is highly efficient and cost-effective. Google announced a $75 billion AI investment in 2025. Gemini 3, based on Gemini 2.0, is Google's latest open model."
+  }
+}

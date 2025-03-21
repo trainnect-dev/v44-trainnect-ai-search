@@ -1,3 +1,5 @@
+'use server';
+
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
@@ -13,10 +15,12 @@ export const createClient = async () => {
           return cookieStore.get(name)?.value;
         },
         set(name: string, value: string, options: Record<string, any>) {
-          cookieStore.set(name, value, options);
+          // This is a readonly cookie store in a Server Component
+          // We can't set cookies here, they will be handled by the middleware
         },
         remove(name: string, options: Record<string, any>) {
-          cookieStore.set(name, "", { ...options, maxAge: 0 });
+          // This is a readonly cookie store in a Server Component
+          // We can't remove cookies here, they will be handled by the middleware
         },
       },
     }

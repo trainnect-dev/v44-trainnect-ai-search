@@ -1,5 +1,5 @@
 <a href="https://github.com/mindful-ai-dude">
-<img alt="Agentic AI Multi-LLM Assistant Built With Next.js 15 App Router, React 19, Tavily Search, and Vercel's AI SDK.  Built with love by Gregory Kennedy." src="app/opengraph-image.png">
+<img alt="Agentic Multi-LLM AI Assistant Built With Next.js 15 App Router, React 19, Tavily Search, and Vercel's AI SDK.  Built with love by Gregory Kennedy." src="app/opengraph-image.png">
   <h1 align="center">Multi-LLM AI Assistant</h1>
 </a>
 

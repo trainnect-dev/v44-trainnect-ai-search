@@ -1,0 +1,40 @@
+{
+  "timestamp": "2025-03-17T16:47:23.955Z",
+  "query": "latest developments in AI chip manufacturing 2024",
+  "results": {
+    "query": "latest developments in AI chip manufacturing 2024",
+    "responseTime": 2.72,
+    "images": [],
+    "results": [
+      {
+        "title": "Built for AI, this chip moves beyond transistors for huge ...",
+        "url": "https://engineering.princeton.edu/news/2024/03/06/built-ai-chip-moves-beyond-transistors-huge-computational-gains",
+        "content": "Princeton University\nPrinceton Engineering\nBuilt for AI, this chip moves beyond transistors for huge computational gains\nBy Scott Lyon\nMarch 6, 2024\nPrinceton researchers have totally reimagined the physics of computing to build a chip for modern AI workloads, and with new U.S. government backing they will see how fast, compact and power-efficient this chip can get. An early prototype is pictured above. Photo by Photo by Hongyang Jia/Princeton University",
+        "rawContent": null,
+        "score": 0.8396422
+      },
+      {
+        "title": "10 top AI hardware and chip-making companies in 2025 - TechTarget",
+        "url": "https://www.techtarget.com/searchdatacenter/tip/Top-AI-hardware-companies",
+        "content": "The company's NVLink technology can connect the Grace Hopper superchip to other superchips. NVLink enables multiple GPUs to communicate through high-speed interconnection.\nThe Blackwell B200 AI chip, a GPU microarchitecture, has been delayed and should be released in late 2024, with B200A planned for 2025. Nvidia also plans to launch a new accelerator, Rubin, in 2026.\nQualcomm [...] Part of: The future of AI hardware in the data center\nArticle 1 of 4\nUp Next\n10 top AI hardware and chip-making companies in 2024Due to rapid AI hardware advancement, companies are releasing advanced products yearly to keep up with the competition. The new competitive product on the market is the AI chip.\nA primer on AI chip designFour common AI chips -- CPU, GPU, FPGA and ASIC -- are advancing with the current market for AI chip design. Read on to see what the future holds for AI chips. [...] AMD created its next generation of Epyc and Ryzen processors. The company released its latest product, the Zen 5 CPU microarchitecture, in 2024.\nAMD released the MI300A and MI300X AI chips in December 2023. MI300A has a GPU with 228 compute units and 24 CPU cores, while the MI300X chip is a GPU model with 304 compute units. The MI300X and Nvidia's H100 rival in memory capacity and bandwidth.\nApple",
+        "rawContent": null,
+        "score": 0.7228212569190325
+      },
+      {
+        "title": "2024 Semiconductor Industry Outlook | Deloitte US",
+        "url": "https://www2.deloitte.com/us/en/pages/technology-media-and-telecommunications/articles/semiconductor-industry-outlook.html",
+        "content": "Generative AI accelerator chips and how semiconductor companies are using GenAI\n\nTrends around smart manufacturing  \n\n\nThe need for more assembly and test capacity worldwide  \n\n\nHow chip industry IP is a target for cyberattacks at a whole new threat level  \n\n\nAnd a final geopolitics section that looks at export controls around advanced node manufacturing equipment and technologies, as well as advanced GenAI semiconductors [...] Perspectives\n2024 semiconductor industry outlook\nTrends and predictions for a cyclical industry\nLed by Generative AI, chip sales look to bounce back in 2024—but geopolitics could complicate growth in the semiconductor industry. Learn more about trends, challenges, and new possibilities for the year ahead in our 2024 semiconductor industry outlook.\n\n\n\n\n\n\n\n\n\nSave for later",
+        "rawContent": null,
+        "score": 0.6956670962145111
+      },
+      {
+        "title": "2025 global semiconductor industry outlook - Deloitte",
+        "url": "https://www2.deloitte.com/us/en/insights/industry/technology/technology-media-telecom-outlooks/semiconductor-industry-outlook.html",
+        "content": "54.  Deloitte, “How generative AI is transforming the semiconductor industry”; Belle Lin, “Designing chips is getting harder. These engineers say chatbots and AI can help,” The Wall Street Journal, Feb. 6, 2024.\nView in Article [...] Deloitte predicted that, by 2023, AI would emerge as a powerful aid to human semiconductor engineers, assisting them on extremely complex chip-design processes, and enabling them to find ways to improve and optimize PPA (power, performance, and area).36 As of 2024, gen AI has enabled rapid iterations to enhance existing designs and discover entirely new ones that can do it in less time.37 In 2025, there will likely be more emphasis toward “shift left”—an approach to chip design and development [...] Competition from agile chip startups could intensify, challenging incumbents in the broader semiconductor industry. Notably, AI chip startups secured a cumulative US$7.6 billion in venture capital funding globally during the second, third, and last quarter of 2024,76 and several of these startups offer specialized solutions including customizable RISC-V-based applications, chiplets, LLM inference chips, photonic ICs, chip design, and chip equipment.",
+        "rawContent": null,
+        "score": 0.6791461745110409
+      }
+    ],
+    "answer": "AI chip manufacturing in 2024 saw significant advancements, with new designs and government support for efficiency. Generative AI is transforming semiconductor design, and startups are gaining traction with specialized solutions. The industry anticipates further competition and innovation."
+  }
+}

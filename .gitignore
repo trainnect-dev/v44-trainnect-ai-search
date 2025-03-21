@@ -51,11 +51,11 @@ next-env.d.ts
 # folders 
 /docs
 docs/
-/tavily_output
-tavily_output/
-/ai_agents_output
-ai_agents_output/
-/supabase-setup
-supabase-setup/
+#/tavily_output
+#tavily_output/
+#/ai_agents_output
+#ai_agents_output/
+# /supabase-setup
+# supabase-setup/
 
 

@@ -9,9 +9,11 @@ import {
   Search,
   MessageSquare,
   Menu,
-  X
+  X,
+  Bot
 } from "lucide-react";
 import { ChatHistoryDropdown } from "./chat-history/chat-history-dropdown";
+import { UserProfile } from "./auth/user-profile";
 
 interface SidebarLinkProps {
   label: string;
@@ -108,6 +110,11 @@ export const SidebarBody = ({ className, children, ...props }: SidebarBodyProps)
           </button>
         </div>
         {children}
+        {/* Add user profile at the bottom of the sidebar */}
+        <div className="mt-auto flex items-center justify-between px-2 py-2">
+          {open && <span className="text-sm text-muted-foreground">Account</span>}
+          <UserProfile />
+        </div>
       </motion.div>
       <div
         style={{
@@ -162,7 +169,7 @@ export const Logo = () => {
           animate={{ opacity: 1 }}
           className="font-medium text-foreground whitespace-pre"
         >
-          Trainnect AI
+          GKennedy AI
         </motion.span>
       )}
     </Link>

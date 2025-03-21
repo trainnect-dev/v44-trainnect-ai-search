@@ -92,10 +92,10 @@ export function TavilyChat() {
       ) : (
         <div className="flex flex-col gap-0.5 sm:text-2xl text-xl md:w-1/2 w-full">
           <div className="flex flex-row gap-2 items-center">
-            <div>Trainnect AI with Tavily Search</div>
+            <div>GK-AI with Tavily Search</div>
           </div>
           <div className="dark:text-zinc-500 text-zinc-400">
-            Search Less, Learn More with Web-Enhanced AI
+            Search with Web-Enhanced GK-AI
           </div>
         </div>
       )}

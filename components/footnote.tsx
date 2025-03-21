@@ -3,7 +3,7 @@ import Link from 'next/link';
 export function Footnote() {
   return (
     <div className="text-xs text-zinc-400 leading-5 hidden sm:block">
-      This app is built using{' '}
+      This app utilizes{' '}
       <Link
         className="underline underline-offset-2"
         href="https://nextjs.org/"
@@ -19,13 +19,13 @@ export function Footnote() {
       >
         React 19
       </Link>
-      . Trainnect, Search Less, Learn More{' '}
+      . built with love by Gregory Kennedy{' '}
       <Link
         className="underline underline-offset-2"
-        href="https://trainnect.com"
+        href="linkedin.com/in/gregorykennedymindfuldude/"
         target="_blank"
       >
-        documentation
+        LinkedIn
       </Link>
       .
     </div>

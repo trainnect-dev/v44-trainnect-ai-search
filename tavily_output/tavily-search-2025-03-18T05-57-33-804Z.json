@@ -1,0 +1,47 @@
+{
+  "timestamp": "2025-03-18T05:57:33.804Z",
+  "query": "Qwen QWQ 32B open source model news 2025 January to March",
+  "results": {
+    "query": "Qwen QWQ 32B open source model news 2025 January to March",
+    "responseTime": 2.02,
+    "images": [],
+    "results": [
+      {
+        "title": "Alibaba's new open source model QwQ-32B matches DeepSeek-R1 ...",
+        "url": "https://venturebeat.com/ai/alibabas-new-open-source-model-qwq-32b-matches-deepseek-r1-with-way-smaller-compute-requirements/",
+        "content": "Team Collaboration\nUCaaS\nVirtual Reality Collaboration\nVirtual Employee Experience\n\n\nProgramming & Development\nProduct Development\nApplication Development\nTest Management\nDevelopment Languages\n\n\n\n\n\nSubscribe Events Video Special Issues Jobs\n\nAlibaba’s new open source model QwQ-32B matches DeepSeek-R1 with way smaller compute requirements\nCarl Franzen@carlfranzen\nMarch 5, 2025 3:06 PM [...] Published Time: 2025-03-05T23:06:56+00:00\nqwq-32b-launches-high-efficiency-performance-reinforcement | VentureBeat\nSkip to main content\nEvents Video Special Issues Jobs\n\nSubscribe\n\nArtificial Intelligence\nView All\nAI, ML and Deep Learning\nAuto ML\nData Labelling\nSynthetic Data\nConversational AI\nNLP\nText-to-Speech\n\n\nSecurity\nView All\nData Security and Privacy\nNetwork Security and Privacy\nSoftware Security\nComputer Hardware Security\nCloud and Data Storage Security [...] © 2025 VentureBeat. All rights reserved.\n×",
+        "rawContent": null,
+        "score": 0.8079757123646724
+      },
+      {
+        "title": "Qwen/QwQ-32B - Hugging Face",
+        "url": "https://huggingface.co/Qwen/QwQ-32B",
+        "content": "For requirements on GPU memory and the respective throughput, see results here.\nCitation\nIf you find our work helpful, feel free to give us a cite.\n```\n@misc{qwq32b,\n    title = {QwQ-32B: Embracing the Power of Reinforcement Learning},\n    url = {https://qwenlm.github.io/blog/qwq-32b/},\n    author = {Qwen Team},\n    month = {March},\n    year = {2025}\n}\n@article{qwen2.5,\n      title={Qwen2.5 Technical Report},",
+        "rawContent": null,
+        "score": 0.7704722974358975
+      },
+      {
+        "title": "QwQ-32B: Embracing the Power of Reinforcement Learning - Qwen",
+        "url": "https://qwenlm.github.io/blog/qwq-32b/",
+        "content": "QwQ-32B: Embracing the Power of Reinforcement Learning | Qwen\n\n\nBlog\nPublication\nAbout\nTry Qwen Chat \n\nQwQ-32B: Embracing the Power of Reinforcement Learning\nMarch 6, 2025 · 4 min · 742 words · Qwen Team | Translations:\n\n简体中文 [...] © 2025 Qwen Powered by Hugo [...] Our research explores the scalability of Reinforcement Learning (RL) and its impact on enhancing the intelligence of large language models. We are excited to introduce QwQ-32B, a model with 32 billion parameters that achieves performance comparable to DeepSeek-R1, which boasts 671 billion parameters (with 37 billion activated). This remarkable outcome underscores the effectiveness of RL when applied to robust foundation models pretrained on extensive world knowledge. Furthermore, we have",
+        "rawContent": null,
+        "score": 0.6330047782051282
+      },
+      {
+        "title": "Alibaba Cloud Unveils QwQ-32B: A Compact Reasoning Model with ...",
+        "url": "https://www.alibabacloud.com/blog/alibaba-cloud-unveils-qwq-32b-a-compact-reasoning-model-with-cutting-edge-performance_602039",
+        "content": "QwQ-32B is now available as an open-source model on Hugging Face and Model Scope under the Apache 2.0 license, allowing free downloads. It is also accessible via Qwen Chat. Thanks to its significantly reduced deployment costs, the model can be efficiently deployed on consumer-grade hardware.\n\n\n\nFor more details about QwQ-32B, visit the official blog post: QwQ-32B: Embracing the Power of Reinforcement Learning.\n\n\n\nThis article was originally published on Alizila written by Crystal Liu. [...] Read previous post:\n\nFlinkSQL Temporary Join Development\n\nAlibaba Cloud Community\n\n1,109 posts | 332 followers\n\nYou may also like\n\nAlibaba Cloud Community - December 2, 2024\n\nAlibaba Cloud Community - January 2, 2025\n\nAlibaba Cloud Community - February 27, 2025\n\nCed - February 17, 2025\n\nFuji - February 25, 2025\n\nAlibaba Cloud Community - September 19, 2024\n\nComments\n\nAlibaba Cloud Community\n\n1,109 posts | 332 followers\n\nRelated Products\n\nTongyi Qianwen (Qwen) [...] Built on Qwen2.5-32B, Alibaba Cloud’s latest large language model with the exact parameter count, QwQ-32B excels across a variety of benchmarks, including AIME 24 (mathematical reasoning), Live CodeBench (coding proficiency), LiveBench (test set contamination and objective evaluation), IFEval (instruction-following ability), and BFCL (tool and function-calling capabilities).",
+        "rawContent": null,
+        "score": 0.6015643906552707
+      },
+      {
+        "title": "Top 9 Large Language Models as of March 2025 | Shakudo",
+        "url": "https://www.shakudo.io/blog/top-9-large-language-models",
+        "content": "‍\nAlibaba released Qwen2.5-Max earlier last month, the new model designed to deliver enhanced performance for large-scale natural language processing tasks. In instruct model evaluations, this new model outperforms DeepSeek V3 in benchmarks such as Arena-Hard, LiveBench, LiveCodeBench, and GPQA-Diamond, while also delivering strong performance in other assessments like MMLU-Pro. [...] ‍\nAlibaba released Qwen2.5-Max earlier last month, the new model designed to deliver enhanced performance for large-scale natural language processing tasks. In instruct model evaluations, this new model outperforms DeepSeek V3 in benchmarks such as Arena-Hard, LiveBench, LiveCodeBench, and GPQA-Diamond, while also delivering strong performance in other assessments like MMLU-Pro. [...] ‍\nAlibaba released Qwen2.5-Max earlier last month, the new model designed to deliver enhanced performance for large-scale natural language processing tasks. In instruct model evaluations, this new model outperforms DeepSeek V3 in benchmarks such as Arena-Hard, LiveBench, LiveCodeBench, and GPQA-Diamond, while also delivering strong performance in other assessments like MMLU-Pro.",
+        "rawContent": null,
+        "score": 0.592976629059829
+      }
+    ],
+    "answer": "Qwen QWQ 32B is an open-source model released by Alibaba in early 2025, matching DeepSeek-R1's performance with lower compute needs. It is available on Hugging Face and Alibaba Cloud. The model emphasizes reinforcement learning for scalability."
+  }
+}

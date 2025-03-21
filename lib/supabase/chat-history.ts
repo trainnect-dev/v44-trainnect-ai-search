@@ -1,10 +1,8 @@
-import { createClient } from "@/utils/supabase/server";
-import { cookies } from "next/headers";
+import { createClient } from "@/utils/supabase/server-client";
 import { ChatMessage, ChatSession, TimeFilter } from "../types/chat-history";
 
 export async function getChatSessions(timeFilter: TimeFilter = 'all'): Promise<ChatSession[]> {
-  const cookieStore = cookies();
-  const supabase = createClient(cookieStore);
+  const supabase = await createClient();
   
   let query = supabase
     .from('chat_sessions')
@@ -30,8 +28,7 @@ export async function getChatSessions(timeFilter: TimeFilter = 'all'): Promise<C
 }
 
 export async function getChatSessionMessages(sessionId: string): Promise<ChatMessage[]> {
-  const cookieStore = cookies();
-  const supabase = createClient(cookieStore);
+  const supabase = await createClient();
   
   const { data, error } = await supabase
     .from('chat_messages')
@@ -48,8 +45,7 @@ export async function getChatSessionMessages(sessionId: string): Promise<ChatMes
 }
 
 export async function createChatSession(title: string): Promise<ChatSession | null> {
-  const cookieStore = cookies();
-  const supabase = createClient(cookieStore);
+  const supabase = await createClient();
   
   const { data: userData, error: userError } = await supabase.auth.getUser();
   
@@ -82,8 +78,7 @@ export async function saveChatMessage(
   role: 'user' | 'assistant',
   content: string
 ): Promise<ChatMessage | null> {
-  const cookieStore = cookies();
-  const supabase = createClient(cookieStore);
+  const supabase = await createClient();
   
   // First, update the session's updated_at timestamp
   await supabase
@@ -113,8 +108,7 @@ export async function saveChatMessage(
 }
 
 export async function deleteChatSession(sessionId: string): Promise<boolean> {
-  const cookieStore = cookies();
-  const supabase = createClient(cookieStore);
+  const supabase = await createClient();
   
   // First, delete all messages in the session
   const { error: messagesError } = await supabase

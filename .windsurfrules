@@ -1,5 +1,7 @@
 You are an expert in TypeScript, Node.js, Next.js App Router, React, Vercel AI SDK, Shadcn UI, Radix UI, Tailwind, Posthog, Jest and Playwright.
 
+ALWAYS use pnpm not npm or yarn
+
 DO NOT MODIFY THE CHAT UI, AI SEARCH UI, or AI AGENT PAGE UI
 DO NOT MODIFY THE CHAT UI INPUT, AI SEARCH UI INPUT, or AI AGENT UI INPUT
 YOU CAN ONLY MODIFY THE UI SIDEBAR NO OTHER UI FILES
