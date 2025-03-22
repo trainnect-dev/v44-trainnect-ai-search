@@ -5,6 +5,7 @@ import { useChat } from '@ai-sdk/react';
 import { ModelConfig, AVAILABLE_MODELS } from '@/lib/ai-agents/types';
 import { cn } from '@/lib/utils';
 import type { Message } from 'ai';
+import { CopyButton } from '../copy-icon';
 
 interface ToolCall {
   id: string;
@@ -90,12 +91,19 @@ export function AgentChat({ className }: AgentChatProps) {
               key={message.id}
               className={cn(
                 'mb-4 last:mb-0',
-                message.role === 'assistant' ? 'pl-4 border-l-2' : ''
+                message.role === 'assistant' ? 'pl-4 border-l-2 relative' : ''
               )}
             >
               <div className="font-medium mb-1">
                 {message.role === 'user' ? 'You' : 'Assistant'}:
               </div>
+              {message.role === 'assistant' && (
+                <div className="absolute -left-10 top-0">
+                  <CopyButton 
+                    content={message.content || ''} 
+                  />
+                </div>
+              )}
               <div className="whitespace-pre-wrap">
                 {message.content}
                 {extendedMessage.role === 'assistant' && extendedMessage.toolCalls?.map((tool, index) => (

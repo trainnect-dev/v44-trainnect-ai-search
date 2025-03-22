@@ -4,96 +4,126 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { History, Trash2, Copy, MoreVertical } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useSidebar } from "../sidebar";
-import { ChatSession, TimeFilter } from "@/lib/types/chat-history";
 import { createClient } from "@/utils/supabase/client";
-import { useRouter } from "next/navigation";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
+import { ChatSession, TimeFilter } from "@/lib/types/chat-history";
+import { useSidebar } from "../sidebar";
 
 interface ChatHistoryDropdownProps {
   className?: string;
 }
 
 export function ChatHistoryDropdown({ className }: ChatHistoryDropdownProps) {
-  const { open } = useSidebar();
   const [isOpen, setIsOpen] = useState(false);
-  const [timeFilter, setTimeFilter] = useState<TimeFilter>('all');
   const [chatSessions, setChatSessions] = useState<ChatSession[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-  const router = useRouter();
+  const [timeFilter, setTimeFilter] = useState<TimeFilter>('7');
   const supabase = createClient();
+  const router = useRouter();
+  const { open } = useSidebar();
 
-  useEffect(() => {
-    if (isOpen) {
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+    if (!isOpen) {
       fetchChatSessions();
     }
-  }, [isOpen, timeFilter]);
+  };
 
   const fetchChatSessions = async () => {
     setIsLoading(true);
     try {
-      // Convert days to milliseconds
-      let fromDate: string | null = null;
-      if (timeFilter !== 'all') {
-        const daysInMs = parseInt(timeFilter) * 24 * 60 * 60 * 1000;
-        fromDate = new Date(Date.now() - daysInMs).toISOString();
+      // Get the current user
+      const { data: { user }, error: userError } = await supabase.auth.getUser();
+      
+      if (userError || !user) {
+        console.error('User not authenticated:', userError);
+        setIsLoading(false);
+        return;
       }
       
+      // Build the query
       let query = supabase
         .from('chat_sessions')
         .select('*')
+        .eq('user_id', user.id)
         .order('updated_at', { ascending: false });
       
-      if (fromDate) {
+      // Apply time filter if not 'all'
+      if (timeFilter !== 'all') {
+        // Convert days to milliseconds
+        const daysInMs = parseInt(timeFilter) * 24 * 60 * 60 * 1000;
+        const fromDate = new Date(Date.now() - daysInMs).toISOString();
+        
         query = query.gte('updated_at', fromDate);
       }
       
+      // Execute the query
       const { data, error } = await query;
       
       if (error) {
         console.error('Error fetching chat sessions:', error);
         toast.error('Failed to load chat history');
-        return;
+        setChatSessions([]);
+      } else {
+        setChatSessions(data || []);
       }
-      
-      setChatSessions(data as ChatSession[]);
     } catch (error) {
       console.error('Error in fetchChatSessions:', error);
-      toast.error('Failed to load chat history');
+      toast.error('An unexpected error occurred');
+      setChatSessions([]);
     } finally {
       setIsLoading(false);
     }
   };
 
-  const handleDeleteSession = async (sessionId: string, e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
+  // Fetch sessions when the time filter changes
+  useEffect(() => {
+    if (isOpen) {
+      fetchChatSessions();
+    }
+  }, [timeFilter]);
+
+  const handleSessionClick = (sessionId: string) => {
+    router.push(`/chat/${sessionId}`);
+  };
+
+  const handleDeleteSession = async (sessionId: string, e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent triggering the parent onClick
     
     try {
-      // Delete all messages in the session first
+      // Delete the session
+      const { error } = await supabase
+        .from('chat_sessions')
+        .delete()
+        .eq('id', sessionId);
+      
+      if (error) {
+        console.error('Error deleting chat session:', error);
+        toast.error('Failed to delete chat session');
+        return;
+      }
+      
+      // Delete all messages associated with the session
       await supabase
         .from('chat_messages')
         .delete()
         .eq('session_id', sessionId);
       
-      // Then delete the session
-      await supabase
-        .from('chat_sessions')
-        .delete()
-        .eq('id', sessionId);
-      
       // Update the local state
-      setChatSessions((prev: ChatSession[]) => prev.filter((session: ChatSession) => session.id !== sessionId));
+      setChatSessions(chatSessions.filter(session => session.id !== sessionId));
       toast.success('Chat session deleted');
     } catch (error) {
-      console.error('Error deleting chat session:', error);
-      toast.error('Failed to delete chat session');
+      console.error('Error in handleDeleteSession:', error);
+      toast.error('An unexpected error occurred');
     }
   };
 
-  const handleCopyToClipboard = async (sessionId: string, e: React.MouseEvent<HTMLButtonElement>) => {
-    e.stopPropagation();
+  const handleCopyToClipboard = async (sessionId: string, e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent triggering the parent onClick
     
     try {
+      // Fetch the messages for this session
       const { data, error } = await supabase
         .from('chat_messages')
         .select('*')
@@ -101,51 +131,23 @@ export function ChatHistoryDropdown({ className }: ChatHistoryDropdownProps) {
         .order('created_at', { ascending: true });
       
       if (error) {
-        throw error;
+        console.error('Error fetching chat messages:', error);
+        toast.error('Failed to copy chat content');
+        return;
       }
       
-      const formattedChat = data.map((msg: any) => 
-        `${msg.role === 'user' ? 'You' : 'Assistant'}: ${msg.content}`
+      // Format the messages
+      const formattedMessages = data.map(msg => 
+        `${msg.role === 'user' ? 'You' : 'AI'}: ${msg.content}`
       ).join('\n\n');
       
-      // Create a temporary textarea element to copy text
-      const textArea = document.createElement('textarea');
-      textArea.value = formattedChat;
-      // Make the textarea out of viewport
-      textArea.style.position = 'fixed';
-      textArea.style.left = '-999999px';
-      textArea.style.top = '-999999px';
-      document.body.appendChild(textArea);
-      textArea.focus();
-      textArea.select();
-      
-      try {
-        // Use the older document.execCommand method which has better browser support
-        const success = document.execCommand('copy');
-        if (success) {
-          toast.success('Chat copied to clipboard');
-        } else {
-          toast.error('Failed to copy chat to clipboard');
-        }
-      } catch (err) {
-        console.error('Error copying text: ', err);
-        toast.error('Failed to copy chat to clipboard');
-      } finally {
-        document.body.removeChild(textArea);
-      }
+      // Copy to clipboard
+      await navigator.clipboard.writeText(formattedMessages);
+      toast.success('Chat content copied to clipboard');
     } catch (error) {
-      console.error('Error copying chat to clipboard:', error);
-      toast.error('Failed to copy chat to clipboard');
+      console.error('Error in handleCopyToClipboard:', error);
+      toast.error('Failed to copy chat content');
     }
-  };
-
-  const handleSessionClick = (sessionId: string) => {
-    // Implement logic to restore chat session
-    router.push(`/chat/${sessionId}`);
-  };
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
   };
 
   return (
@@ -241,7 +243,7 @@ export function ChatHistoryDropdown({ className }: ChatHistoryDropdownProps) {
                   onClick={() => handleSessionClick(session.id)}
                   className="flex items-center gap-2 px-8 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent transition-colors w-full cursor-pointer group"
                 >
-                  <span className="truncate flex-1">{session.title || 'Untitled Chat'}</span>
+                  <span className="truncate flex-1">{session.title && session.title !== 'New Chat' ? session.title : 'Untitled Chat'}</span>
                   <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
                     <button
                       onClick={(e) => handleCopyToClipboard(session.id, e)}

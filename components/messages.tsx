@@ -3,12 +3,13 @@
 import cn from "classnames";
 import Markdown from "react-markdown";
 import { markdownComponents } from "./markdown-components";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ChevronDownIcon, ChevronUpIcon, SpinnerIcon } from "./icons";
 import { UIMessage } from "ai";
 import { UseChatHelpers } from "@ai-sdk/react";
 import Image from "next/image";
+import { CopyButton } from "./copy-icon";
 
 interface ReasoningPart {
   type: "reasoning";
@@ -70,31 +71,25 @@ export function ReasoningMessagePart({
         </div>
       )}
 
-      <AnimatePresence initial={false}>
-        {isExpanded && (
-          <motion.div
-            key="reasoning"
-            className="text-sm dark:text-zinc-400 text-zinc-600 flex flex-col gap-4 border-l pl-3 dark:border-zinc-800"
-            initial="collapsed"
-            animate="expanded"
-            exit="collapsed"
-            variants={variants}
-            transition={{ duration: 0.2, ease: "easeInOut" }}
-          >
-            {part.details.map((detail, detailIndex) =>
-              detail.type === "text" ? (
-                <Markdown key={detailIndex} components={markdownComponents}>
-                  {detail.text}
-                </Markdown>
-              ) : (
-                "<redacted>"
-              ),
-            )}
-
-            {/* <Markdown components={markdownComponents}>{reasoning}</Markdown> */}
-          </motion.div>
+      <motion.div
+        key="reasoning"
+        className="text-sm dark:text-zinc-400 text-zinc-600 flex flex-col gap-4 border-l pl-3 dark:border-zinc-800"
+        initial="collapsed"
+        animate="expanded"
+        exit="collapsed"
+        variants={variants}
+        transition={{ duration: 0.2, ease: "easeInOut" }}
+      >
+        {part.details.map((detail, detailIndex) =>
+          detail.type === "text" ? (
+            <Markdown key={detailIndex} components={markdownComponents}>
+              {detail.text}
+            </Markdown>
+          ) : (
+            "<redacted>"
+          ),
         )}
-      </AnimatePresence>
+      </motion.div>
     </div>
   );
 }
@@ -187,9 +182,19 @@ export function Messages({ messages, status }: MessagesProps) {
             className={cn("flex flex-col gap-4", {
               "dark:bg-zinc-800 bg-zinc-200 p-2 rounded-xl w-fit ml-auto":
                 message.role === "user",
-              "": message.role === "assistant",
+              "relative": message.role === "assistant",
             })}
           >
+            {message.role === "assistant" && (
+              <div className="absolute -left-10 top-0">
+                <CopyButton 
+                  content={message.parts
+                    .filter(part => part.type === "text")
+                    .map(part => (part.type === "text" ? part.text : ""))
+                    .join("\n")} 
+                />
+              </div>
+            )}
             {/* Display message text content */}
             {message.parts.map((part, partIndex) => {
               if (part.type === "text") {
@@ -200,20 +205,8 @@ export function Messages({ messages, status }: MessagesProps) {
                   />
                 );
               }
-
-              if (part.type === "reasoning") {
-                return (
-                  <ReasoningMessagePart
-                    key={`${message.id}-${partIndex}`}
-                    // @ts-expect-error export ReasoningUIPart
-                    part={part}
-                    isReasoning={
-                      status === "streaming" &&
-                      partIndex === message.parts.length - 1
-                    }
-                  />
-                );
-              }
+              
+              return null;
             })}
             
             {/* Display attachments if present */}

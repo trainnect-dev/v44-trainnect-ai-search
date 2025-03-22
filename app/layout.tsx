@@ -6,6 +6,7 @@ import { LayoutDashboard, Search, MessageSquare, Bot } from 'lucide-react';
 import { Sidebar, SidebarBody, SidebarLink, ChatHistoryDropdown } from '@/components/sidebar';
 import { NewChatButton } from '../components/new-chat-button';
 import { createClient } from '@/utils/supabase/server-client';
+import { SupabaseStorageInitializer } from '@/components/supabase-storage-initializer';
 
 import './globals.css';
 
@@ -31,6 +32,7 @@ export default async function RootLayout({
     <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
       <body className="min-h-screen">
         <Toaster position="top-center" />
+        {isAuthenticated && <SupabaseStorageInitializer />}
         <div className="flex">
           {isAuthenticated && (
             <Sidebar>

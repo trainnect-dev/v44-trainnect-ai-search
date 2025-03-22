@@ -28,20 +28,21 @@ export function NewChatButton() {
       
       // Determine the appropriate action based on the current path
       if (pathname === "/" || pathname.startsWith("/chat")) {
-        // AI Chat - Reset the current chat or create a new one
-        window.location.href = "/";
+        // For AI Chat, simply redirect to the home page
+        // The Chat component will create a new session when mounted
+        router.push("/");
         toast.success("Started a new AI Chat session");
       } else if (pathname.startsWith("/tavily-ai-search")) {
-        // AI Search - Reset the current search or create a new one
-        window.location.href = "/tavily-ai-search";
+        // For AI Search, redirect to the search page
+        router.push("/tavily-ai-search");
         toast.success("Started a new AI Search session");
       } else if (pathname.startsWith("/ai-agents")) {
-        // AI Agents - Reset the current agent or create a new one
-        window.location.href = "/ai-agents";
+        // For AI Agents, redirect to the agents page
+        router.push("/ai-agents");
         toast.success("Started a new AI Agent session");
       } else {
-        // Default to AI Chat if on an unknown page
-        window.location.href = "/";
+        // Default to AI Chat
+        router.push("/");
         toast.success("Started a new AI Chat session");
       }
     } catch (error) {
